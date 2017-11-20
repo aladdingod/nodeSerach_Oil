@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><%= title %></title>
+
+
+<link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+<link rel="stylesheet" href="stylesheets/style.css" media="screen" type="text/css">
+</head>
+
+<body>
+<h1 style="text-align: center; margin: 100px 0 0 0;">全国省市油价查询</h1>
+<div style="padding: 100px 100px 50px;">
+	<form class="bs-example bs-example-form" role="form">
+		<div class="row">
+			<div class="col-lg-16">
+				<div class="input-group">
+					<input id="cityName" type="text" class="form-control" placeholder="请输入城市">
+					<span class="input-group-btn">
+						<button id="searchBtn" class="btn btn-default" type="button">
+							Go!
+						</button>
+					</span>
+				</div><!-- /input-group -->
+			</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+	</form>
+</div>
+<p>当前省市：<a class="searchCity">ssss</a>当前日期<a class="timeNow">12313</a></p>
+<div class="skillbar clearfix " data-percent="20%">
+	<div class="skillbar-title" style="background: #d35400;"><span>P0</span></div>
+	<div class="skillbar-bar" style="background: rgb(230, 126, 34) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p0">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="25%">
+	<div class="skillbar-title" style="background: #2980b9;"><span>89号</span></div>
+	<div class="skillbar-bar" style="background: rgb(52, 152, 219) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p89">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="50%">
+	<div class="skillbar-title" style="background: #2c3e50;"><span>90号</span></div>
+	<div class="skillbar-bar" style="background: rgb(44, 62, 80) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p90">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="40%">
+	<div class="skillbar-title" style="background: #46465e;"><span>92号</span></div>
+	<div class="skillbar-bar" style="background: rgb(90, 104, 165) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p92">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="75%">
+	<div class="skillbar-title" style="background: #333333;"><span>93号</span></div>
+	<div class="skillbar-bar" style="background: rgb(82, 82, 82) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p93">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="100%">
+	<div class="skillbar-title" style="background: #27ae60;"><span>95号</span></div>
+	<div class="skillbar-bar" style="background: rgb(46, 204, 113) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p95">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="70%">
+	<div class="skillbar-title" style="background: #124e8c;"><span>97号</span></div>
+	<div class="skillbar-bar" style="background: rgb(66, 136, 208) none repeat scroll 0% 0%;">
+		<p class="wh_num">97</p>
+	</div>
+	<div class="skill-bar-percent" itemOil="p97">￥/L</div>
+</div> <!-- End Skill Bar -->
+
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/layer/layer.js"></script>
+<script type="text/javascript" src="javascripts/mySearch.js"></script>
+<script type="text/javascript">
+ $(function(){ 
+    //go-click事件
+    mySearch.search("山东");
+    $("#searchBtn").unbind("clcik").click(function(){
+    	var cityName = $("#cityName").val();
+    	mySearch.search(cityName);
+    });
+});
+</script>
+
+
+</body></html>
